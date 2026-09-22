@@ -1,9 +1,7 @@
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight, Menu } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { LeadForm } from "@/components/lead-form";
-import { Footer } from "@/components/footer";
-import { HeroSceneWrapper } from "@/components/hero-scene-wrapper";
 
 const services = [
   { number: "01", title: "Attention Architecture", text: "Positioning, creative platforms, and launch systems that make the first second impossible to ignore.", tag: "ATTENTION" },
@@ -19,31 +17,12 @@ const cases = [
   { client: "Nova Living", title: "A launch that felt inevitable", metric: "42k", label: "people in the waitlist", tone: "case-nova" },
 ];
 
-function SiteHeader() {
-  return (
-    <header className="site-header">
-      <Link href="/" className="brand-lockup" aria-label="AUREVIA home">
-        <span className="brand-mark">A</span>
-        <span>AUREVIA</span>
-      </Link>
-      <nav className="desktop-nav" aria-label="Primary navigation">
-        <Link href="/#method">Method</Link>
-        <Link href="/work">Work</Link>
-        <Link href="/insights">Insights</Link>
-        <Link href="/#contact">Contact</Link>
-      </nav>
-      <Link className="header-cta" href="/#contact">Start a conversation <ArrowUpRight size={15} /></Link>
-      <button className="mobile-menu-button" type="button" aria-label="Toggle menu"><Menu size={22} /></button>
-    </header>
-  );
-}
-
 function Hero() {
   return (
     <section className="hero-section">
       <div className="hero-grid" aria-hidden="true" />
       <div className="hero-copy">
-        <Reveal className="eyebrow"><span className="eyebrow-dot" /> AUREVIA / DIGITAL MARKETING AGENCY</Reveal>
+        <Reveal className="eyebrow"><span className="eyebrow-dot" /> THE GUYS / DIGITAL MARKETING AGENCY</Reveal>
         <Reveal delay={0.08} as="h1" className="hero-title">
           <span>Impossible</span>
           <span>to <em>Ignore</em><span className="title-line" /></span>
@@ -54,7 +33,6 @@ function Hero() {
           <Link className="text-link" href="/work">See selected work <ArrowUpRight size={15} /></Link>
         </Reveal>
       </div>
-      <div className="hero-orbit" aria-hidden="true"><HeroSceneWrapper /></div>
       <div className="hero-bottom"><span>EST. 2026 / GLOBAL BY DESIGN</span><span>SCROLL TO ENTER <ArrowDown size={15} /></span></div>
     </section>
   );
@@ -63,7 +41,7 @@ function Hero() {
 function Manifesto() {
   return (
     <section className="manifesto-section" id="method">
-      <div className="section-label"><span>01 / MANIFESTO</span><span>THE AUREVIA LENS</span></div>
+      <div className="section-label"><span>01 / MANIFESTO</span><span>THE GUYS LENS</span></div>
       <Reveal as="h2" className="manifesto-title">Attention is not the goal.<br /><em>It is the invitation.</em></Reveal>
       <div className="manifesto-grid">
         <p className="manifesto-lede">The market is not short of messages. It is short of meaning. We help ambitious teams find the idea that cuts through, then build the system that lets it travel.</p>
@@ -114,7 +92,7 @@ function Engine() {
   return (
     <section className="engine-section">
       <div className="engine-copy"><div className="section-label"><span>05 / OPERATING SYSTEM</span><span>THE GROWTH ENGINE</span></div><Reveal as="h2">Strategy is the spark.<br /><em>Systems are the engine.</em></Reveal><p>We do not hand over a deck and disappear. We build the rituals, feedback loops, and creative infrastructure that keep your brand moving after launch.</p><div className="engine-stats"><div><strong>5</strong><span>moves in the method</span></div><div><strong>1</strong><span>connected growth system</span></div><div><strong>∞</strong><span>ways to get sharper</span></div></div></div>
-      <div className="engine-visual" aria-label="AUREVIA growth engine diagram"><div className="engine-ring ring-one" /><div className="engine-ring ring-two" /><div className="engine-core"><span>ATTENTION</span><strong>GROWTH</strong><span>CONVERSION</span></div><div className="engine-node node-one">STORY</div><div className="engine-node node-two">AMPLIFY</div><div className="engine-node node-three">LEARN</div></div>
+      <div className="engine-visual" aria-label="The Guys growth engine diagram"><div className="engine-ring ring-one" /><div className="engine-ring ring-two" /><div className="engine-core"><span>ATTENTION</span><strong>GROWTH</strong><span>CONVERSION</span></div><div className="engine-node node-one">STORY</div><div className="engine-node node-two">AMPLIFY</div><div className="engine-node node-three">LEARN</div></div>
     </section>
   );
 }
@@ -133,5 +111,5 @@ function Contact() {
 }
 
 export default function HomePage() {
-  return <><SiteHeader /><main><Hero /><Manifesto /><Method /><Services /><Work /><Engine /><Insights /><Contact /></main><Footer /></>;
+  return <><Hero /><Manifesto /><Method /><Services /><Work /><Engine /><Insights /><Contact /></>;
 }

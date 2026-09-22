@@ -1,6 +1,6 @@
 import { getDb } from "@/lib/db";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-import { errorResponse, json, parseJsonBody } from "@/lib/http";
+import { errorResponse, json } from "@/lib/http";
 import { requireAdmin, assertMutationOrigin } from "@/lib/admin";
 
 export async function GET() {

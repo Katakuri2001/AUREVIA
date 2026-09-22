@@ -1,4 +1,3 @@
-import { getDb } from "@/lib/db";
 import { requireAdmin } from "@/lib/admin";
 import { errorResponse, json } from "@/lib/http";
 

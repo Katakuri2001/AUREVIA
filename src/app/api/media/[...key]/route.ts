@@ -1,6 +1,6 @@
 import { getDb } from "@/lib/db";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-import { errorResponse, json } from "@/lib/http";
+import { errorResponse } from "@/lib/http";
 
 export async function GET(_request: Request, { params }: { params: Promise<{ key: string[] }> }) {
   const { key } = await params;
