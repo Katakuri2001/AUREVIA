@@ -8,10 +8,11 @@ interface RevealProps {
   as?: keyof React.JSX.IntrinsicElements;
   delay?: number;
   style?: CSSProperties;
+  id?: string;
 }
 
 export const Reveal = forwardRef<HTMLDivElement, RevealProps>((props, ref) => {
-  const { children, className = "", as: Element = "div", delay = 0, style } = props;
+  const { children, className = "", as: Element = "div", delay = 0, style, id } = props;
   const elementRef = useRef<HTMLDivElement>(null);
   useImperativeHandle(ref, () => elementRef.current!, []);
 
@@ -28,6 +29,6 @@ export const Reveal = forwardRef<HTMLDivElement, RevealProps>((props, ref) => {
     return () => observer.disconnect();
   }, []);
 
-  return React.createElement(Element, { ref: elementRef, className: `reveal ${className}`, style: { transitionDelay: `${delay}ms`, ...style } }, children);
+  return React.createElement(Element, { ref: elementRef, id, className: `reveal ${className}`, style: { transitionDelay: `${delay}ms`, ...style } }, children);
 });
 Reveal.displayName = "Reveal";

@@ -49,17 +49,17 @@ INSERT INTO case_study_metrics (id,case_study_id,label,value,sort_order) VALUES
 ('metric-nova-1','case-nova','Waitlist','42k',1),('metric-nova-2','case-nova','Revenue forecast','+38%',2),('metric-nova-3','case-nova','Creator purchases','29%',3);
 
 INSERT INTO testimonials (id,name,role,company,quote,case_study_id,featured,sort_order) VALUES
-('test-halo','Mara Ellison','Chief Commercial Officer','Halo Hospitality','AUREVIA made our brand feel like the destination before a guest ever arrived.','case-halo',1,1),
+('test-halo','Mara Ellison','Chief Commercial Officer','Halo Hospitality','The Guys made our brand feel like the destination before a guest ever arrived.','case-halo',1,1),
 ('test-arc','Jonas Reed','VP of Growth','Arc Finance','The work gave our team a shared language and gave buyers a reason to lean in.','case-arc',1,2),
-('test-nova','Leila Okafor','Founder','Nova Living','AUREVIA understood that the product was only half the story—the ritual was the brand.','case-nova',1,3);
+('test-nova','Leila Okafor','Founder','Nova Living','The Guys understood that the product was only half the story—the ritual was the brand.','case-nova',1,3);
 
 INSERT INTO site_settings (key,value,value_type,updated_at) VALUES
-('agency_name','AUREVIA','string','${now}'),('agency_tagline','Impossible to Ignore','string','${now}'),('demo_notice','Demo content is fictional and prepared for presentation only.','string','${now}');
+('agency_name','The Guys','string','${now}'),('agency_tagline','Impossible to Ignore','string','${now}'),('demo_notice','Demo content is fictional and prepared for presentation only.','string','${now}');
 
 INSERT INTO seo_metadata (id,page_key,title,description,canonical_url,og_image,twitter_card,created_at,updated_at) VALUES
-('seo-home','home','AUREVIA — Impossible to Ignore','A premium digital marketing agency for brands ready to be remembered.','/','/images/aurevia-og.svg','summary_large_image','${now}','${now}'),
-('seo-work','work','Selected Work | AUREVIA','Strategy, story, amplification, conversion, and growth in motion.','/work','/images/aurevia-og.svg','summary_large_image','${now}','${now}'),
-('seo-insights','insights','Insights | AUREVIA','Ideas for building brands that earn attention and compound growth.','/insights','/images/aurevia-og.svg','summary_large_image','${now}','${now}');
+('seo-home','home','The Guys — Impossible to Ignore','A premium digital marketing agency for brands ready to be remembered.','/','/images/the-guys-og.svg','summary_large_image','${now}','${now}'),
+('seo-work','work','Selected Work | The Guys','Strategy, story, amplification, conversion, and growth in motion.','/work','/images/the-guys-og.svg','summary_large_image','${now}','${now}'),
+('seo-insights','insights','Insights | The Guys','Ideas for building brands that earn attention and compound growth.','/insights','/images/the-guys-og.svg','summary_large_image','${now}','${now}');
 `;
 
   writeFileSync(sqlPath, sql);

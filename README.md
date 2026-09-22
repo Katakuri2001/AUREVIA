@@ -1,13 +1,13 @@
-# AUREVIA
+# The Guys
 
-AUREVIA is a premium digital marketing agency experience built as a full-stack Next.js application and deployed to Cloudflare Workers. The site turns the agency philosophy — **ATTENTION → STORY → AMPLIFY → CONVERT → GROW** — into an editorial, cinematic, interactive narrative.
+The Guys is a premium digital marketing agency experience built as a full-stack Next.js application and deployed to Cloudflare Workers. The site turns the agency philosophy — **ATTENTION → STORY → AMPLIFY → CONVERT → GROW** — into an editorial, cinematic, interactive narrative.
 
 ## Stack
 
 - Next.js 16 App Router
 - React 19 + TypeScript strict mode
-- Tailwind CSS 4
-- Three.js / React Three Fiber / drei for purposeful 3D
+- Tailwind CSS 4 (PostCSS plugin `@tailwindcss/postcss`)
+- Space Grotesk + DM Serif Display via `next/font` — no runtime 3D
 - GSAP + Lenis for motion
 - Cloudflare Workers through `@opennextjs/cloudflare`
 - Cloudflare D1 for relational data
@@ -25,6 +25,8 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+> Use the webpack-based dev/build (already the default in the `dev` / `build` scripts). Turbopack currently trips on Tailwind 4's lightningcss integration.
 
 The local development server uses Wrangler's simulated D1/R2 bindings through `initOpenNextCloudflareForDev()`.
 
