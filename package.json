@@ -4,7 +4,7 @@
   "private": true,
   "description": "AUREVIA — an immersive digital marketing agency experience on Next.js and Cloudflare Workers.",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",

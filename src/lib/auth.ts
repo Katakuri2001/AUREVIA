@@ -28,7 +28,7 @@ export async function hashToken(token: string): Promise<string> {
   return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("");
 }
 
-export async function createUserSession(userId: string, userAgent?: string | null, ipHash?: string | null): Promise<SessionUser> {
+export async function createUserSession(userId: string, userAgent?: string | null, ipHash?: string | null): Promise<SessionUser & { token: string }> {
   const token = getSessionToken();
   const tokenHash = await hashToken(token);
   const sessionId = crypto.randomUUID();
@@ -41,7 +41,7 @@ export async function createUserSession(userId: string, userAgent?: string | nul
     .run();
   const row = await db.prepare("SELECT * FROM users WHERE id = ?").bind(userId).first<Record<string, unknown>>();
   if (!row) throw new Error("User session could not be resolved.");
-  return { ...mapUser(row), sessionId };
+  return { ...mapUser(row), sessionId, token };
 }
 
 export async function getUserFromToken(token: string | undefined): Promise<SessionUser | null> {

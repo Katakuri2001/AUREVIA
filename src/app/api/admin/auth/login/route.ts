@@ -18,7 +18,7 @@ export async function POST(request: Request) {
   }
   const userAgent = request.headers.get("user-agent");
   const session = await createUserSession(String(row.id), userAgent, null);
-  const cookie = createSessionCookie(session.sessionId);
+  const cookie = createSessionCookie(session.token);
   return new Response(JSON.stringify({ ok: true, data: { user: session } }), { status: 200, headers: { "content-type": "application/json", "set-cookie": cookie } });
 }
 
