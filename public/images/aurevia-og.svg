@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AUREVIA abstract signal field</title>
+  <desc id="desc">Dark editorial background with luminous gold orbital lines.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090b0d"/>
+      <stop offset=".58" stop-color="#111516"/>
+      <stop offset="1" stop-color="#1d1710"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="42%" r="42%">
+      <stop offset="0" stop-color="#e8b96a" stop-opacity=".72"/>
+      <stop offset=".35" stop-color="#b77d3b" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="1.8"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g fill="none" stroke="#e8b96a" stroke-width="1" opacity=".55" filter="url(#soft)">
+    <path d="M-80 520 C240 380 380 700 680 530 S1040 220 1300 300"/>
+    <path d="M-100 480 C220 330 450 650 740 460 S1040 140 1320 240"/>
+    <path d="M-50 560 C180 440 480 750 800 580 S1080 300 1280 380"/>
+  </g>
+  <g fill="#e8b96a" opacity=".85">
+    <circle cx="820" cy="255" r="5"/><circle cx="850" cy="240" r="2.5"/><circle cx="780" cy="280" r="2"/>
+    <circle cx="910" cy="190" r="3"/><circle cx="690" cy="350" r="2"/><circle cx="1020" cy="130" r="2"/>
+  </g>
+  <g fill="none" stroke="#f4e5c8" stroke-width="1" opacity=".28">
+    <path d="M110 120h260M110 145h180M110 170h230"/>
+    <path d="M940 480h150M970 505h110M920 530h190"/>
+  </g>
+  <text x="90" y="110" fill="#f4e5c8" font-family="Arial, sans-serif" font-size="22" letter-spacing="8">AUREVIA / SIGNAL FIELD</text>
+</svg>
